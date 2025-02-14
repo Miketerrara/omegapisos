@@ -1,0 +1,120 @@
+@use 'variable.scss' as c;
+
+.menu{
+    width:100%;
+    padding: 0 2rem;
+    box-sizing:border-box;
+    background-color: c.$headerBg;
+    height: 8rem;
+    z-index:2;
+    .logo{
+    height: 4rem;
+    }
+    .bar {
+        .bar-01,
+        .bar-02,
+        .bar-03 {
+            width: 32px;
+            height: 5.2px;
+            background: c.$black;
+            margin-top: .42rem;
+            border-radius: 1rem;
+        }
+    }
+    #nav-hidden{
+        display:block;
+    }
+    #hidden{
+        display:none;
+    }
+    button{
+        border: none;
+        padding: 0;
+    }
+    @media screen and (min-width: 767px) {
+        padding: 0 5.2rem;
+    }
+    @media screen and (min-width: 1024px){
+        #nav-hidden {
+            display: none;
+        }
+        #hidden{
+            display:flex;
+        }
+        ul{
+            margin: 0 2rem;
+        }
+        ul li{
+            margin: 0 5.6rem;
+            text-decoration: none;
+            font: 400 1.4rem c.$ff;
+            letter-spacing: .8px;
+            transition: var(--transition-normal);
+        }
+        .links li:hover{
+            font-weight:800;
+            letter-spacing: 1px;
+        }
+        .bar {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1280px) {
+        &{
+            padding:0;
+        }
+    }
+}
+.bar-modal {
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 1;
+    top: -1500px;
+    right: 0px;
+    width: 100%;
+    transition: All .4s ease-in-out;
+    &--active {
+        position: absolute;
+        top: 0;
+        padding:2rem 3.2rem;
+        box-sizing: border-box;
+        visibility: visible;
+        background-color: c.$bgTransparet;
+        width:100%;
+        height: 100%;
+        z-index: 99;
+        opacity: 1;
+        
+    }
+    &__header{
+        img{
+            height: 4rem;
+        }
+        i{
+            font-size:1.2rem;
+            cursor:pointer;
+        }
+    }
+    &__nav {
+        text-align: center;
+        width:56%;
+        font: c.$ff-dsc;
+        color: c.$txtColor;
+        
+        li{
+            letter-spacing: .2rem;
+            margin: c.$mg16;
+            text-transform: uppercase;
+        }
+    }
+    &__footer{
+        width:100%;
+        margin-top:8rem;
+        li{
+            letter-spacing: 0.1;
+            text-transform:none; 
+        }
+        
+    }
+}
