@@ -1,0 +1,161 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.menu {
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  background-color: #0B8558;
+  height: 12rem;
+  border-radius: 2rem;
+  z-index: 3;
+}
+.menu .logo {
+  margin: -4rem 2rem 0;
+}
+.menu .bar .bar-01,
+.menu .bar .bar-02,
+.menu .bar .bar-03 {
+  width: 40px;
+  height: 6px;
+  background: #fff;
+  margin-top: 0.4rem;
+  border-radius: 1rem;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: transparent;
+  font: 400 1.2rem "Coiny", serif;
+  cursor: pointer;
+}
+
+.bar-modal {
+  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 1;
+  top: -1500px;
+  right: 0px;
+  width: 100%;
+  transition: All 0.4s ease-in-out;
+}
+
+.bar-modal--active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: visible;
+  background-color: #0B8558;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  opacity: 0.95;
+}
+
+.nav-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font: 400 2.4rem/2.5 "Nunito", serif;
+}
+
+.nav-modal ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nav-modal ul li:hover {
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.nav__links {
+  width: 100%;
+}
+
+.links {
+  display: none;
+}
+
+.nav-hidden {
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .bar {
+    display: none;
+  }
+  .nav__button {
+    display: none;
+  }
+  .links {
+    display: flex;
+  }
+  .links + .links li {
+    border: 1px solid #f5f7fa;
+    padding: 1rem 1.6rem;
+    border-radius: 0.8rem;
+  }
+  .links li i {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    vertical-align: middle;
+  }
+  .nav__links {
+    display: flex;
+    flex: 1 1 360px;
+  }
+  ul {
+    margin: 0 2rem;
+  }
+  ul li {
+    margin: 0 2rem;
+    font: 400 1.4rem var(--sf);
+    letter-spacing: 0.8px;
+    transition: var(--transition-normal);
+  }
+  .links li:hover {
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  .nav-hidden {
+    display: none;
+  }
+  .bar {
+    display: none;
+  }
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: "Coiny", serif;
+  width: 100%;
+  margin: 0 auto;
+  background: #f5f7fa;
+}
+
+ul {
+  display: flex;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
