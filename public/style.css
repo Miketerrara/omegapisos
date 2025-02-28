@@ -589,6 +589,11 @@ footer div i {
   max-width: 100%;
   overflow: hidden;
 }
+.block-pisos__principal--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .block-pisos__principal--prev-next {
   position: absolute;
   top: 50%;
@@ -601,28 +606,6 @@ footer div i {
   opacity: 0.8;
   display: flex;
   justify-content: space-between;
-}
-.block-pisos__principal--selection {
-  position: absolute;
-  cursor: pointer;
-  bottom: 2rem;
-  left: 50%;
-  transform: translate(-50%);
-  display: flex;
-  width: 10rem;
-  justify-content: space-between;
-}
-.block-pisos__principal--selection .circle-fill {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 10rem;
-}
-.block-pisos__principal--selection .circle-empty {
-  width: 8px;
-  height: 8px;
-  border: 2px solid #fff;
-  border-radius: 10rem;
 }
 .block-pisos__gallery {
   display: flex;
@@ -714,6 +697,10 @@ footer div i {
   }
 }
 #linha-durafloor, #linha-eucafloor, #linha-espacofloor, #linha-quickstep, #linha-tarket {
+  display: none;
+}
+
+#durafloor, #espacofloor, #quickstep, #tarket, #gallery_durafloor, #gallery_espacofloor, #gallery_quickstep, #gallery_tarket {
   display: none;
 }
 
@@ -1128,8 +1115,14 @@ body {
   padding: 0 2.8rem;
   box-sizing: border-box;
 }
-.container__options--hide {
-  display: none;
+.container__options--hide button {
+  width: 100%;
+  border: 1px solid #93613E;
+  border-radius: 2rem;
+  display: block;
+  margin: 0.4rem auto;
+  color: #93613E !important;
+  text-align: center;
 }
 .container__options button {
   width: 100%;
@@ -1218,22 +1211,6 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .container__options--hide {
-    display: block;
-    padding: 0 2rem;
-    box-sizing: border-box;
-  }
-  .container__options--hide li button {
-    width: 100%;
-    border: 1px solid #93613E;
-    border-radius: 2rem;
-    display: block;
-    margin: 0.4rem auto;
-    color: #93613E;
-    text-align: center;
-  }
-}
 .flex-wrap__evenly p {
   margin-top: 2rem;
   color: #3a3a3a;
@@ -1382,6 +1359,12 @@ button {
 a {
   color: #3a3a3a;
   text-decoration: none;
+}
+
+@media screen and (min-width: 767px) {
+  .container__options--hide button {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

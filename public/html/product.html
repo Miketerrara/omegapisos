@@ -12,8 +12,8 @@
     <meta name="ICBM" content="-28.480649, -53.111859" />
     <meta name="robots" content="">
     <meta name="revisit-after" content="7 day">
-    <link rel="shortcut icon" href="./assets/symbol_omega-pisos-16.png" sizes="16px" type="image/x-icon">
-    <link rel="shortcut icon" href="./assets/symbol_omega-pisos.png" sizes="32px" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/symbol_omega-pisos-16.png" sizes="16px" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/symbol_omega-pisos.png" sizes="32px" type="image/x-icon">
     <link rel='stylesheet' href='../node_modules/@flaticon/flaticon-uicons/css/all/all.css'>
     <style type="text/css">
         #mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 600px;}
@@ -26,7 +26,7 @@
 <body>
     <header class="menu flex">
         <div class="container flex">
-            <a href="index.html"><img src="../assets/logotipo.png" alt="Logotipo Omega Pisos" class="logo"></a>
+            <a href="../../index.html"><img src="../assets/logotipo.png" alt="Logotipo Omega Pisos" class="logo"></a>
             <nav>
                 <ul class="flex " id="hidden">
                     <li><a href="product.html">Produtos</a></li>
@@ -51,26 +51,26 @@
         </div>
         <div class="bar-modal__nav center">
             <ul class="flex-column">
-                <a href="">
+                <a href="./public/html/product.html">
                     <li>Produtos</li>
                 </a>
                 <hr width="100%">
-                <a href="">
+                <a href="./public/html/inspire.html">
                     <li>Inspiração</li>
                 </a>
                 <hr width="100%">
-                <a href="">
+                <a href="./public/html/contact.html">
                     <li>Orçamento </li>
                 </a>
                 <hr width="100%">
-                <a href="">
+                <a href="./public/html/calc.html">
                     <li>Calculadora</li>
                 </a>
             </ul>
             <div class="bar-modal__footer">
                 <ul class="flex">
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/omegapisosac">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/omegapisos_/">Instagram</a></li>
                 </ul>
             </div>
         </div>
@@ -88,16 +88,14 @@
                     <img src="../assets/logo-quick.png" alt="quick" class="item-brand">
                     <img src="../assets/logo-tarkett.png" alt="Tarkett" class="item-brand">
                 </div>
-                <div class="container__options--hide">
-                    <ul>
-                        <li><button>Durafloor</button></li>
-                        <li><button>ArquiTech</button></li>
-                        <li><button>Espaço Floor</button></li>
-                        <li><button>Eucafloor</button></li>
-                        <li><button>Madebene</button></li>
-                        <li><button>Quick-step</button></li>
-                        <li><button>Tarket</button></li>
-                    </ul>
+                <div class="container__options--hide" id="list-brands">
+                    <button>Durafloor</button>
+                    <button>ArquiTech</button>
+                    <button>Espaço Floor</button>
+                    <button>Eucafloor</button>
+                    <button>Madebene</button>
+                    <button>Quick-step</button>
+                    <button>Tarket</button>
                 </div>
                 <hr width="100%">
                 <div>
@@ -200,33 +198,63 @@
                     </ul>
                 </div>
                 <div class="block-pisos">
-                    <div class="block-pisos__principal">
+                    <div class="block-pisos__principal" >
                         <div class="block-pisos__principal--prev-next">
-                            <i class="fi fi-sr-angle-circle-left"></i>
-                            <i class="fi fi-sr-angle-circle-right"></i>
+                            <i class="fi fi-sr-angle-circle-left" data-target="prev"></i>
+                            <i class="fi fi-sr-angle-circle-right" data-target="next"></i>
                         </div>
-                        <div class="block-pisos__principal--selection">
-                            <div class="circle-fill"></div>
-                            <div class="circle-empty"></div>
-                            <div class="circle-empty"></div>
+                        <div class="block-pisos__principal--img" id="eucafloor">
+                            <img src="../assets/eucafloor-prime-cacau_01.jpg" alt="" id="floor-active">
+                            <img src="../assets/eucafloor-prime-cacau_02.jpg" alt="" class="hide">
                         </div>
-                        <div class="block-pisos__principal--img">
-                            <img src="../assets/eucafloor-floor_03.jpg" alt="" id="floor-first">
-                            <img src="../assets/eucafloor-floor_02.jpg" alt="" class="hide" id="floor-n2">
-                            <img src="../assets/eucafloor-floor_01.jpg" alt="" class="hide" id="floor-n3">
+                        <div class="block-pisos__principal--img" id="durafloor">
+                            <img src="../assets/durafloor-nature.jpg" alt="" id="floor-active">
+                            <img src="../assets/durafloor-nature_02.jpg" alt="" class="hide">
+                            <img src="../assets/durafloor-nature_03.png" alt="" class="hide">
+                            <img src="../assets/durafloor-nature_04.jpg" alt="" class="hide">
+                            <img src="../assets/durafloor-nature_05.jpg" alt="" class="hide">
+                        </div>
+                        <div class="block-pisos__principal--img" id="espacofloor">
+                            <img src="../assets/eucafloor-floor_03.jpg" alt="" id="floor-active">
+                            <img src="../assets/eucafloor-floor_02.jpg" alt="" class="hide">
+                            <img src="../assets/eucafloor-floor_01.jpg" alt="" class="hide">
+                        </div>
+                        <div class="block-pisos__principal--img" id="quickstep">
+                            <img src="../assets/DF-Amendola-Curacao.jpg" alt="" id="floor-active">
+                            <img src="../assets/eucafloor-floor_02.jpg" alt="" class="hide">
+                            <img src="../assets/eucafloor-floor_01.jpg" alt="" class="hide">
+                        </div>
+                        <div class="block-pisos__principal--img" id="tarket">
+                            <img src="../assets/DF-Amendola-Curacao.jpg" alt="" id="floor-active">
+                            <img src="../assets/eucafloor-floor_02.jpg" alt="" class="hide">
+                            <img src="../assets/eucafloor-floor_01.jpg" alt="" class="hide">
                         </div>
                     </div>
                         
-                    <div class="block-pisos__gallery">
-                        <div class="block-pisos__gallery--img">
-                            <img src="../assets/eucafloor-floor.jpg" alt="">
-                        </div>
-                        <div class="block-pisos__gallery--img">
-                            <img src="../assets/eucafloor-floor_02.jpg" alt="">
-                        </div>
-                        <div class="block-pisos__gallery--img">
-                            <img src="../assets/quickstep-carvalho-sereno.jpeg" alt="">
-                        </div>
+                    <div class="block-pisos__gallery" id="gallery_eucafloor">
+                        <img src="../assets/eucafloor-floor.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/eucafloor-floor_02.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/quickstep-carvalho-sereno.jpeg" alt="" class="block-pisos__gallery--img">
+                    </div>
+                    <div class="block-pisos__gallery"  id="gallery_durafloor">
+                        <img src="../assets/eucafloor-floor.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/eucafloor-floor_02.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/quickstep-carvalho-sereno.jpeg" alt="" class="block-pisos__gallery--img">
+                    </div>
+                    <div class="block-pisos__gallery"  id="gallery_espacofloor">
+                        <img src="../assets/eucafloor-floor.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/eucafloor-floor_02.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/quickstep-carvalho-sereno.jpeg" alt="" class="block-pisos__gallery--img">
+                    </div>
+                    <div class="block-pisos__gallery"  id="gallery_quickstep">
+                        <img src="../assets/eucafloor-floor.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/eucafloor-floor_02.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/quickstep-carvalho-sereno.jpeg" alt="" class="block-pisos__gallery--img">
+                    </div>
+                    <div class="block-pisos__gallery" id="gallery_tarket">
+                        <img src="../assets/eucafloor-floor.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/eucafloor-floor_02.jpg" alt="" class="block-pisos__gallery--img">
+                        <img src="../assets/quickstep-carvalho-sereno.jpeg" alt="" class="block-pisos__gallery--img">
                     </div>
                 </div>
             </div>
@@ -305,8 +333,8 @@
                 <p>Paiquerê, 1678 - Jd. Paiquere, Valinhos</p>
             </div>
             <div>
-                <a href=""><i class="fi fi-brands-facebook"></i></a>
-                <a href=""><i class="fi fi-brands-instagram"></i></a>
+                <a href="https://www.facebook.com/omegapisosac"><i class="fi fi-brands-facebook"></i></a>
+                <a href="https://www.instagram.com/omegapisos_/"><i class="fi fi-brands-instagram"></i></a>
             </div>
         </div>
     </footer>
