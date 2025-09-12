@@ -3,28 +3,23 @@
 .block-inspire{
     display:flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap:wrap;
     background-color: #f5f5f5;
     width:100%;
-    gap:2rem;
-    max-height:44rem;
+    gap:3.2rem;
+    max-height:56rem;
     box-sizing:border-box;
     padding:3.2rem 2rem;
     margin: 4.10rem auto 0;
     &__principal{
         position:relative;
         flex:8 1 32rem;
-        height:38rem;
-        overflow:hidden;
+        height:48rem;
         &--img{
             width:100%;
-            max-height:100%;
-            max-width:100%;
-            overflow:hidden;
-            img{
-                width:100%;
-                object-fit: cover;
-            }
+            height:48rem;
+            object-fit: cover;
         }
         &--prev-next{
             position:absolute;
@@ -46,39 +41,41 @@
             left:50%;
             transform:translate(-50%);
             display:flex;
-            width:10rem;
-            justify-content: space-between;
+            width:50%;
+            justify-content: center;
             .circle-fill{
                 width:10px;
                 height:10px;
                 background-color: c.$bg;
                 border-radius:10rem;
+                margin:0 1rem
             }
             .circle-empty{
                 width:8px;
                 height:8px;
                 border:2px solid c.$bg;
                 border-radius:10rem;
+                margin:0 1rem;
             }
         }
     }
     &__gallery{
         display:flex;
-        flex-wrap:wrap;
-        flex:1 0 16rem;
-        gap:1rem;
-        height: 30rem;
-        cursor:pointer;
+        flex-direction:column-reverse;
+        justify-content: stretch;
+        width:20rem;
         &--img{
             position:relative;
             width:100%;
-            max-height:12rem;
-            max-width:100%;
-            overflow:hidden;
-            img{
-                width:100%;
-                object-fit:cover;
-                object-position:50% 50%;
+            height:12rem;
+            padding:.6rem 0;
+            box-sizing: border-box;
+            object-fit: cover;
+            cursor:pointer;
+            transition: c.$transition;
+            &:hover{
+                object-position:50% 40%;
+                filter: brightness(1.2);
             }
         }
     }
